@@ -1,0 +1,17 @@
+{# tutorial/templates/people.html #}
+{% load render_table from django_tables2 %}
+<!doctype html>
+<html>
+    <head>
+    </head>
+    <body>
+        {% render_table sample_table %}
+            <button type="button" onclick="postAndRedirect()">Click Me!</button>
+    </body>
+		<script type="text/javascript">
+            function postAndRedirect(){
+                alert('post relevant data to server here');
+                window.location.href = '/sample_datas/success/';
+            }
+		</script>
+</html>
